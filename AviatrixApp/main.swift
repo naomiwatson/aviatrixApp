@@ -41,7 +41,7 @@ func fly(myPlane : Aviatrix) {
         
         if fuelCheck(myPlane: myPlane, destination : desiredLocation) {
             myPlane.flyTo(destination: desiredLocation)
-            print("🛬 You've arrived in _________!")
+            print("🛬 You've arrived in Bora Bora!")
             gauges(myPlane: myPlane)
         }
     }
@@ -74,12 +74,12 @@ func fuelCheck(myPlane : Aviatrix, destination : String) -> Bool {
     return true
 }
 
-var plane = Aviatrix()
+var plane = Aviatrix(userName: "Naomi")
 
-print("Welcome to the Aviatrix Flight System by _________")
+print("Welcome to the Aviatrix Flight System by \(plane.author)")
 plane.start()
 
-print("You're currently in _________")
+print("You're currently in San Francisco")
 
 var command = ""
 
@@ -109,4 +109,4 @@ while command != "q" {
 }
 
 print(" ")
-print("Thanks for flying with _________ airline!")
+print("Thanks for flying with \(plane.author)airline!")
